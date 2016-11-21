@@ -202,6 +202,6 @@ e("ul.product-list").owlCarousel({
         var e = $(this).attr("href"),
             t = $(this).parent().data("alias"),
             a = $(this).parents(".deal-ajax-load").data("view");
-        getAjaxProduct(t, e, a)
+      //  getAjaxProduct(t, e, a)
     })
 });
