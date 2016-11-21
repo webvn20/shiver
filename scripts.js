@@ -2,17 +2,7 @@ function AddCart1(e, t) {
     $("span.cart-scroll.count-cart").hide();
     var a = parseInt($("span.notify-right.count-cart").html()),
         o = {
-            type: "POST",
-            url: "/cart/add.js",
-            data: "quantity=" + t + "&variantId=" + e,
-            dataType: "json",
-            success: function() {
-                var e = a + parseInt(t);
-                $("span.notify-right.count-cart").html(e), $("span.cart-scroll.count-cart").html(e).show(), $(".addcart-popup").addClass("active"), $(window).width() < 768 && (window.location.href = "/cart")
-            },
-            error: function() {
-                alert("Đã có lỗi xảy ra, vui lòng thao tác lại...")
-            }
+        
         };
     jQuery.ajax(o)
 }
@@ -23,30 +13,7 @@ function getAjaxProduct(e, t, a) {
             n = "/" + e + "?view=" + a,
             i = $(t).find("ul.product-list").children().length;
         0 == i && jQuery.ajax({
-            url: n,
-            type: "GET",
-            data: {},
-            dataType: "html",
-            beforeSend: function() {
-                $(t).parents(".ajax-box-load").append(o), $(window).width() > 1199 && $(this).parents(".deal-ajax-load").hasClass("hot-deals-row") ? $(t).parents(".ajax-box-load").find(".wrap_loading").css("width", $(t).parents(".ajax-box-load").width() - $(t).parents(".ajax-box-load").find(".width-load").width() + "px") : $(window).width() > 991 && $(t).parents(".ajax-box-load").find(".wrap_loading").css("width", $(t).parents(".ajax-box-load").width() - $(t).parents(".ajax-box-load").find(".width-load").width() + "px"), $(t).parents(".ajax-box-load").find(".wrap_loading").show()
-            },
-            complete: function(e) {
-                $(t).find("ul.product-list").html(e.responseText), $(t).find("ul.product-list iframe").remove(), $(t).find("ul.product-list").owlCarousel({
-                    items: 4,
-                    autoPlay: !1,
-                    addClassActive: !0,
-                    navigation: !0,
-                    responsive: !0,
-                    slideSpeed: 1e3,
-                    paginationSpeed: 1e3,
-                    navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                    itemsDesktop: [1199, 4],
-                    itemsDesktopSmall: [979, 4],
-                    itemsTablet: [768, 3],
-                    itemsTabletSmall: [450, 2],
-                    itemsMobile: [370, 1]
-                }), $(t).parents(".ajax-box-load").find(".wrap_loading").remove()
-            }
+          
         })
     }
 }! function(e) {
