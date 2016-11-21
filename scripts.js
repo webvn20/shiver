@@ -16,9 +16,8 @@ function AddCart1(e, t) {
         };
     jQuery.ajax(o)
 }
+
 function getAjaxProduct(e, t, a) {
-}
-function getAjaxProduct1(e, t, a) {
     if (null != e && "" != e) {
         var o = $(".option3 .wrap_loading").clone(),
             n = "/" + e + "?view=" + a,
