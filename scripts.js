@@ -82,6 +82,22 @@ function getAjaxProduct1(e, t, a) {
         768 > t && (e("#nav-top-menu").removeClass("nav-ontop"), e("body").hasClass("home") && (t > 1024 ? e("#nav-top-menu").find(".vertical-menu-content").show() : e("#nav-top-menu").find(".vertical-menu-content").hide()), e("#shopping-cart-box-ontop .cart-block").appendTo("#cart-block"), e("#shopping-cart-box-ontop").fadeOut(), e("#user-info-opntop #user-info-top").appendTo(".top-header .container"), e("#form-search-opntop form").appendTo("#header .header-search-box"))
     }
     e(document).ready(function() {
+        
+e("ul.product-list").owlCarousel({
+                    items: 4,
+                    autoPlay: !1,
+                    addClassActive: !0,
+                    navigation: !0,
+                    responsive: !0,
+                    slideSpeed: 1e3,
+                    paginationSpeed: 1e3,
+                    navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                    itemsDesktop: [1199, 4],
+                    itemsDesktopSmall: [979, 4],
+                    itemsTablet: [768, 3],
+                    itemsTabletSmall: [450, 2],
+                    itemsMobile: [370, 1]
+}),
         e(".owl-main-slider").owlCarousel({
             items: 1,
             autoPlay: !1,
